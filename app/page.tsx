@@ -1,3 +1,4 @@
+import { WhyUs } from "@/components/about-us/why-us";
 import { Services } from "@/components/services/services";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -29,6 +30,7 @@ export default function Home() {
         </div>
       </section>
       <Services />
+      <WhyUs />
     </main>
   );
 }
