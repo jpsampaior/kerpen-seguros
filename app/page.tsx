@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="flex items-center justify-center flex-col gap-8 text-center p-5 min-h-[85vh]">
+      <section className="flex items-center justify-center flex-col gap-8 text-center p-5 min-h-[95vh]">
         <Image
           src="/logo-kerpen-white.png"
           alt="logo-kerpen"
