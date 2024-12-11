@@ -1,3 +1,4 @@
+import { AboutUs } from "@/components/about-us/about-us";
 import { WhyUs } from "@/components/about-us/why-us";
 import { Services } from "@/components/services/services";
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,7 @@ export default function Home() {
       </section>
       <Services />
       <WhyUs />
+      <AboutUs />
     </main>
   );
 }
