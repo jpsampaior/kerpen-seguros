@@ -1,5 +1,6 @@
 import { AboutUs } from "@/components/about-us/about-us";
 import { WhyUs } from "@/components/about-us/why-us";
+import { Contacts } from "@/components/contacts/contacts";
 import { Services } from "@/components/services/services";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -33,6 +34,7 @@ export default function Home() {
       <Services />
       <WhyUs />
       <AboutUs />
+      <Contacts />
     </main>
   );
 }
