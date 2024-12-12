@@ -36,7 +36,7 @@ export function Advertisement() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isFixed]);
 
   return (
     <motion.div
