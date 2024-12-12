@@ -16,6 +16,8 @@ const config: Config = {
         background: {
           default: "#20201F",
           secondary: "#252B42",
+          tertiary: "#252424",
+          footer: "#333232",
         },
         foreground: "#F6F3F4",
       },
