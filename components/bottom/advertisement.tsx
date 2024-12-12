@@ -6,16 +6,15 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 export function Advertisement() {
-  const [isFixed, setIsFixed] = useState(true); // Estado para definir posição fixa
-  const [isVisible, setIsVisible] = useState(true); // Estado para controlar visibilidade
-  const [lastScrollY, setLastScrollY] = useState(0); // Última posição de rolagem
+  const [isFixed, setIsFixed] = useState(true);
+  const [isVisible, setIsVisible] = useState(true); 
+  const [lastScrollY, setLastScrollY] = useState(0); 
 
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.querySelector("footer");
       const advertisement = document.querySelector("#advertisement");
 
-      // Verificar se o footer está na tela
       if (footer && advertisement) {
         const footerTop = footer.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -25,19 +24,19 @@ export function Advertisement() {
         setIsFixed(footerTop > windowHeight - advertisementHeight);
       }
 
-      // Detectar direção do scroll
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        // Scroll para baixo
-        setIsVisible(true);
-      } else {
-        // Scroll para cima
-        setIsVisible(false);
+      if (advertisement) {
+        const rect = advertisement.getBoundingClientRect();
+        if (rect.top + rect.height > 0 && rect.top < window.innerHeight) {
+          setIsVisible(true); 
+        } else {
+          setIsVisible(false);
+        }
       }
+
+      const currentScrollY = window.scrollY;
       setLastScrollY(currentScrollY);
     };
 
-    // Escuta o evento de rolagem
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
@@ -50,18 +49,18 @@ export function Advertisement() {
         position: isFixed ? "fixed" : "static",
         bottom: isFixed ? 0 : "auto",
       }}
-      initial={{ y: 100, opacity: 0 }} // Animação inicial
+      initial={{ y: 100, opacity: 0 }} 
       animate={{
-        y: isVisible ? 0 : 100, // Move para fora da tela quando invisível
+        y: isVisible ? 0 : 100,
         opacity: isVisible ? 1 : 0,
         transition: { type: "spring", stiffness: 80 },
       }}
       whileHover={{
-        scale: 1.02, // Efeito de hover
+        scale: 1.02, 
         transition: { duration: 0.3 },
       }}
       whileInView={{
-        scale: [1, 1.02, 1], // Pequeno pulso infinito ao entrar na viewport
+        scale: [1, 1.02, 1],
         transition: {
           repeat: Infinity,
           duration: 1.5,
