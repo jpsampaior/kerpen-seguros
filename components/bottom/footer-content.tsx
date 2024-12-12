@@ -34,10 +34,7 @@ export function FooterContent() {
           <ul className="space-y-2 text-sm">
             {contact.map((item) => (
               <li key={item.title} className="w-fit mx-auto lg:m-0">
-                <Link
-                  href={item.href}
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
-                >
+                <Link href={item.href} className="flex items-center gap-2">
                   {item.icon}
                   <span>{item.description}</span>
                 </Link>
