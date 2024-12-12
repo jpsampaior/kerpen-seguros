@@ -23,7 +23,7 @@ const partners = [
 
 export function AboutUs() {
   return (
-    <section className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0">
+    <section id="sobre-nos" className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0">
       <h2 className="text-4xl font-bold">Quem Somos</h2>
       <div className="space-y-5">
         {partners.map((partner, index) => (

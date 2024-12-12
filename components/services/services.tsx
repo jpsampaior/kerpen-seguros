@@ -27,7 +27,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="bg-secondary">
+    <section id="servicos" className="bg-secondary">
       <div className="flex flex-col  px-4 py-14 text-center justify-center gap-10 lg:flex-row">
         {services.map((service, index) => (
           <div key={index} className="lg:w-1/4">
