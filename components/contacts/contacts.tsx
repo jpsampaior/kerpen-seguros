@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Contacts() {
   return (
-    <section id="contato" className="text-center space-y-8 py-16 px-4">
+    <section id="contato" className="text-center space-y-8 py-16 px-4 bg-background-default">
       <div className="space-y-1">
         <h2 className="text-4xl font-bold">Estamos aqui para você</h2>
         <p className="lg:w-1/2 lg:mx-auto">

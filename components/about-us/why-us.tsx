@@ -23,7 +23,7 @@ const info = [
 
 export function WhyUs() {
   return (
-    <section className="text-center space-y-8 py-16 px-4">
+    <section className="text-center space-y-8 py-16 px-4 bg-background-default">
       <div className="space-y-1">
         <h2 className="text-4xl font-bold">Proteção Personalizada</h2>
         <p className="lg:w-1/2 lg:mx-auto">

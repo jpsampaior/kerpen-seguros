@@ -23,49 +23,54 @@ const partners = [
 
 export function AboutUs() {
   return (
-    <section id="sobre-nos" className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0">
-      <h2 className="text-4xl font-bold">Quem Somos</h2>
-      <div className="space-y-5">
-        {partners.map((partner, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center gap-5 w-8/12 mx-auto lg:flex-row"
-          >
-            <div className="rounded-full bg-stone-600 w-fit">
-              <Avatar className="w-[150px] h-[150px]">
-                <AvatarImage src="/avatar-placeholder.png" />
-                <AvatarFallback>OK</AvatarFallback>
-              </Avatar>
-            </div>
-            <div className="text-start space-y-2">
-              <div>
-                <div className="flex justify-center items-baseline gap-3 text-primary lg:justify-start">
-                  <h3 className="text-2xl font-bold">{partner.name}</h3>
-                  <h4>{partner.role}</h4>
+    <section className="bg-background-default">
+      <div
+        id="sobre-nos"
+        className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0"
+      >
+        <h2 className="text-4xl font-bold">Quem Somos</h2>
+        <div className="space-y-5">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center gap-5 w-8/12 mx-auto lg:flex-row"
+            >
+              <div className="rounded-full bg-stone-600 w-fit">
+                <Avatar className="w-[150px] h-[150px]">
+                  <AvatarImage src="/avatar-placeholder.png" />
+                  <AvatarFallback>OK</AvatarFallback>
+                </Avatar>
+              </div>
+              <div className="text-start space-y-2">
+                <div>
+                  <div className="flex justify-center items-baseline gap-3 text-primary lg:justify-start">
+                    <h3 className="text-2xl font-bold">{partner.name}</h3>
+                    <h4>{partner.role}</h4>
+                  </div>
+                  <p className="text-center lg:text-start">
+                    {partner.description}
+                  </p>
                 </div>
-                <p className="text-center lg:text-start">
-                  {partner.description}
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-2 lg:flex-row lg:items-start">
-                <Link
-                  href={`mailto:${partner.email}`}
-                  className="flex gap-2 items-center hover:text-primary transition-colors"
-                >
-                  <Mail size={24} className="text-primary" />
-                  <span>{partner.email}</span>
-                </Link>
-                <Link
-                  href={partner.linkedin}
-                  className="flex gap-2 items-center hover:text-primary transition-colors"
-                >
-                  <Linkedin size={24} className="text-primary" />
-                  <span>{partner.name}</span>
-                </Link>
+                <div className="flex flex-col items-center gap-2 lg:flex-row lg:items-start">
+                  <Link
+                    href={`mailto:${partner.email}`}
+                    className="flex gap-2 items-center hover:text-primary transition-colors"
+                  >
+                    <Mail size={24} className="text-primary" />
+                    <span>{partner.email}</span>
+                  </Link>
+                  <Link
+                    href={partner.linkedin}
+                    className="flex gap-2 items-center hover:text-primary transition-colors"
+                  >
+                    <Linkedin size={24} className="text-primary" />
+                    <span>{partner.name}</span>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

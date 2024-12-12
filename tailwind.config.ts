@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        gradient: 'url("/background.jpg")',
+      },
       colors: {
         primary: "#F0C05D",
         secondary: "#2B3864",
