@@ -1,4 +1,4 @@
-import { Mail, Map, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 const contact = [

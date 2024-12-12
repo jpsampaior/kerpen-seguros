@@ -4,7 +4,6 @@ import { Footer } from "@/components/bottom/footer";
 import { Contacts } from "@/components/contacts/contacts";
 import { CustomLink } from "@/components/custom-link";
 import { Services } from "@/components/services/services";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
