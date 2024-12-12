@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 export function Advertisement() {
   return (
     <div className="py-10">
-      <div className="flex flex-col justify-between mx-auto w-10/12 text-center space-y-3 lg:flex-row lg:text-start">
+      <div className="flex flex-col justify-between mx-auto w-9/12 text-center space-y-3 lg:flex-row lg:text-start">
         <div>
           <h3 className="font-bold text-2xl">Gostou do que viu?</h3>
           <p>
