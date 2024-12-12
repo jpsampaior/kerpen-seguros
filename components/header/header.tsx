@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Button } from "../ui/button";
 import { Logo } from "./logo";
 import { Navbar } from "./navbar";
+import { CustomLink } from "../custom-link";
 
 export function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -49,10 +49,14 @@ export function Header() {
         </div>
         <Navbar />
         <div className="lg:w-1/4">
-          <Button className="hidden lg:flex lg:ml-auto">
+          <CustomLink
+            href={"https://wa.me/5585997646804"}
+            className="hidden lg:flex lg:ml-auto"
+            target="_blank"
+          >
             Falar com especialista
             <ArrowRight />
-          </Button>
+          </CustomLink>
         </div>
       </div>
     </motion.header>

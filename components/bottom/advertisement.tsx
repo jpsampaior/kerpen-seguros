@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { CustomLink } from "../custom-link";
 
 export function Advertisement() {
   const [isFixed, setIsFixed] = useState(true);
@@ -66,7 +67,7 @@ export function Advertisement() {
       }}
     >
       <div className="py-6">
-        <div className="flex flex-col justify-between mx-auto text-center space-y-3 lg:flex-row lg:text-start lg:w-9/12">
+        <div className="flex flex-col justify-between mx-auto text-center space-y-3 lg:flex-row lg:text-start lg:w-9/12 lg:space-y-0">
           <div>
             <h3 className="font-bold text-2xl">Gostou do que viu?</h3>
             <p>
@@ -74,11 +75,15 @@ export function Advertisement() {
               solução para você.
             </p>
           </div>
-          <div>
-            <Button className="w-fit mx-auto lg:mx-auto">
+          <div className="flex items-center">
+            <CustomLink
+              href={"https://wa.me/5585997646804"}
+              className="w-fit mx-auto h-10 lg:mx-auto"
+              target="_blank"
+            >
               Falar com consultor
               <ArrowRight />
-            </Button>
+            </CustomLink>
           </div>
         </div>
       </div>

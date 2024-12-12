@@ -2,6 +2,7 @@ import { AboutUs } from "@/components/about-us/about-us";
 import { WhyUs } from "@/components/about-us/why-us";
 import { Footer } from "@/components/bottom/footer";
 import { Contacts } from "@/components/contacts/contacts";
+import { CustomLink } from "@/components/custom-link";
 import { Services } from "@/components/services/services";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -26,10 +27,14 @@ export default function Home() {
               de sinistros.
             </p>
           </div>
-          <Button className="rounded-full">
+          <CustomLink
+            href={"https://wa.me/5585997646804"}
+            className="rounded-full"
+            target="_blank"
+          >
             Falar com especialista
             <ArrowRight />
-          </Button>
+          </CustomLink>
         </div>
       </section>
       <Services />
