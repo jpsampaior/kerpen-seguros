@@ -7,8 +7,8 @@ import { Button } from "../ui/button";
 
 export function Advertisement() {
   const [isFixed, setIsFixed] = useState(true);
-  const [isVisible, setIsVisible] = useState(true); 
-  const [lastScrollY, setLastScrollY] = useState(0); 
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,16 +24,13 @@ export function Advertisement() {
         setIsFixed(footerTop > windowHeight - advertisementHeight);
       }
 
-      if (advertisement) {
-        const rect = advertisement.getBoundingClientRect();
-        if (rect.top + rect.height > 0 && rect.top < window.innerHeight) {
-          setIsVisible(true); 
-        } else {
-          setIsVisible(false);
-        }
-      }
-
       const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY || !isFixed) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
       setLastScrollY(currentScrollY);
     };
 
@@ -49,14 +46,14 @@ export function Advertisement() {
         position: isFixed ? "fixed" : "static",
         bottom: isFixed ? 0 : "auto",
       }}
-      initial={{ y: 100, opacity: 0 }} 
+      initial={{ y: 100, opacity: 0 }}
       animate={{
         y: isVisible ? 0 : 100,
         opacity: isVisible ? 1 : 0,
         transition: { type: "spring", stiffness: 80 },
       }}
       whileHover={{
-        scale: 1.02, 
+        scale: 1.02,
         transition: { duration: 0.3 },
       }}
       whileInView={{
