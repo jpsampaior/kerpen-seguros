@@ -40,7 +40,7 @@ export function Header() {
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={`fixed z-10 w-full bg-background-default ${
-        hasScrolled ? "shadow-md" : ""
+        hasScrolled ? "shadow-md bg-background-default/90" : ""
       }`}
     >
       <div className="flex justify-center mx-auto py-5 lg:w-10/12 lg:justify-between">
