@@ -7,15 +7,29 @@ import { CustomLink } from "../custom-link";
 
 export function Advertisement() {
   const [isFixed, setIsFixed] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 768;
+      setIsVisible(!isMobile);
+      setIsFixed(!isMobile);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.querySelector("footer");
       const advertisement = document.querySelector("#advertisement");
+      const isMobile = window.innerWidth <= 768;
 
-      if (footer && advertisement) {
+      if (!isMobile && footer && advertisement) {
         const footerTop = footer.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         const advertisementHeight =
