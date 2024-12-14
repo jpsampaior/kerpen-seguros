@@ -1,8 +1,11 @@
+"use client";
+
 import { AboutUs } from "@/components/about-us/about-us";
 import { WhyUs } from "@/components/about-us/why-us";
 import { Footer } from "@/components/bottom/footer";
 import { Contacts } from "@/components/contacts/contacts";
 import { CustomLink } from "@/components/custom-link";
+import { FadeIn } from "@/components/fade-in";
 import { Services } from "@/components/services/services";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -10,7 +13,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="flex items-center justify-center flex-col gap-8 text-center p-5 min-h-[95vh]">
+      <FadeIn className="flex items-center justify-center flex-col gap-8 text-center p-5 min-h-[95vh]">
         <Image
           src="/logo-kerpen-white.png"
           alt="logo-kerpen"
@@ -35,7 +38,7 @@ export default function Home() {
             <ArrowRight />
           </CustomLink>
         </div>
-      </section>
+      </FadeIn>
       <Services />
       <WhyUs />
       <AboutUs />

@@ -1,4 +1,5 @@
 import { Award, BriefcaseBusiness, Handshake } from "lucide-react";
+import { FadeIn } from "../fade-in";
 
 const info = [
   {
@@ -23,31 +24,33 @@ const info = [
 
 export function WhyUs() {
   return (
-    <section className="text-center space-y-8 py-16 px-4 bg-background-default">
-      <div className="space-y-1">
-        <h2 className="text-4xl font-bold">Proteção Personalizada</h2>
-        <p className="lg:w-1/2 lg:mx-auto">
-          Preparados para atuar em todas as fases do seu negócio, desde o
-          gerenciamento de risco até a implementação e o acompanhamento do
-          programa de seguros, com a estratégia de simplificar o dia a dia dos
-          clientes, otimizando e assegurando suas operações
-        </p>
-      </div>
-      <div className="flex flex-col gap-8 text-center justify-center lg:flex-row">
-        {info.map((item, index) => (
-          <div
-            key={index}
-            className="bg-secondary rounded-lg lg:w-1/4 p-7 space-y-4"
-          >
-            <div className="text-primary space-y-2">
-              {item.icon}
-              <hr className="border-primary w-1/6 mx-auto" />
-              <h3 className="text-2xl font-bold">{item.title}</h3>
+    <section className="bg-background-default">
+      <FadeIn className="text-center space-y-8 py-16 px-4 ">
+        <div className="space-y-1">
+          <h2 className="text-4xl font-bold">Proteção Personalizada</h2>
+          <p className="lg:w-1/2 lg:mx-auto">
+            Preparados para atuar em todas as fases do seu negócio, desde o
+            gerenciamento de risco até a implementação e o acompanhamento do
+            programa de seguros, com a estratégia de simplificar o dia a dia dos
+            clientes, otimizando e assegurando suas operações
+          </p>
+        </div>
+        <div className="flex flex-col gap-8 text-center justify-center lg:flex-row">
+          {info.map((item, index) => (
+            <div
+              key={index}
+              className="bg-secondary rounded-lg lg:w-1/4 p-7 space-y-4"
+            >
+              <div className="text-primary space-y-2">
+                {item.icon}
+                <hr className="border-primary w-1/6 mx-auto" />
+                <h3 className="text-2xl font-bold">{item.title}</h3>
+              </div>
+              <p>{item.description}</p>
             </div>
-            <p>{item.description}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </FadeIn>
     </section>
   );
 }

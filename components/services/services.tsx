@@ -1,4 +1,5 @@
 import { Building2, HeartPulse, Truck } from "lucide-react";
+import { FadeIn } from "../fade-in";
 
 const services = [
   {
@@ -28,7 +29,7 @@ const services = [
 export function Services() {
   return (
     <section id="servicos" className="bg-secondary">
-      <div className="flex flex-col  px-4 py-14 text-center justify-center gap-10 lg:flex-row">
+      <FadeIn className="flex flex-col  px-4 py-14 text-center justify-center gap-10 lg:flex-row">
         {services.map((service, index) => (
           <div key={index} className="lg:w-1/4">
             {service.icon}
@@ -38,7 +39,7 @@ export function Services() {
             </div>
           </div>
         ))}
-      </div>
+      </FadeIn>
     </section>
   );
 }

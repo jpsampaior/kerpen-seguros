@@ -1,6 +1,7 @@
 import { Linkedin, Mail } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Link from "next/link";
+import { FadeIn } from "../fade-in";
 
 const partners = [
   {
@@ -23,11 +24,8 @@ const partners = [
 
 export function AboutUs() {
   return (
-    <section className="bg-background-default">
-      <div
-        id="sobre-nos"
-        className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0"
-      >
+    <section className="bg-background-default" id="sobre-nos">
+      <FadeIn className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0">
         <h2 className="text-4xl font-bold">Quem Somos</h2>
         <div className="space-y-5">
           {partners.map((partner, index) => (
@@ -71,7 +69,7 @@ export function AboutUs() {
             </div>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }
