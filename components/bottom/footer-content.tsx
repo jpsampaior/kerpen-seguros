@@ -18,7 +18,7 @@ const contact = [
 
 export function FooterContent() {
   return (
-    <div className="py-10 bg-background-footer">
+    <div className="py-2 bg-background-footer">
       <div className="flex flex-col justify-between mx-auto w-9/12 space-y-6 text-center lg:flex-row lg:text-start">
         <div className="flex flex-col justify-center space-y-2 lg:w-1/2">
           <h5 className="font-bold text-xl">Kerpen Seguros</h5>
