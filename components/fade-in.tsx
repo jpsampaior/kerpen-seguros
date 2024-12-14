@@ -8,14 +8,14 @@ type FadeInProps = {
 
 export const FadeIn = ({ children, className }: FadeInProps) => {
   return (
-    <motion.section
+    <motion.div
       className={className}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       {children}
-    </motion.section>
+    </motion.div>
   );
 };
