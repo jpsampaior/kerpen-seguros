@@ -29,7 +29,7 @@ export function AboutUs() {
         <h2 className="text-4xl font-bold">Quem Somos</h2>
         <div className="space-y-5">
           {partners.map((partner, index) => (
-            <div
+            <FadeIn
               key={index}
               className="flex flex-col items-center gap-5 w-8/12 mx-auto lg:flex-row"
             >
@@ -66,7 +66,7 @@ export function AboutUs() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </FadeIn>

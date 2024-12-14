@@ -35,9 +35,9 @@ export function WhyUs() {
             clientes, otimizando e assegurando suas operações
           </p>
         </FadeIn>
-        <FadeIn className="flex flex-col gap-8 text-center justify-center lg:flex-row">
+        <div className="flex flex-col gap-8 text-center justify-center lg:flex-row">
           {info.map((item, index) => (
-            <div
+            <FadeIn
               key={index}
               className="bg-secondary rounded-lg lg:w-1/4 p-7 space-y-4"
             >
@@ -47,9 +47,9 @@ export function WhyUs() {
                 <h3 className="text-2xl font-bold">{item.title}</h3>
               </div>
               <p>{item.description}</p>
-            </div>
+            </FadeIn>
           ))}
-        </FadeIn>
+        </div>
       </div>
     </section>
   );
