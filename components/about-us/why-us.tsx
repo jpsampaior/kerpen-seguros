@@ -25,8 +25,8 @@ const info = [
 export function WhyUs() {
   return (
     <section className="bg-background-default">
-      <FadeIn className="text-center space-y-8 py-16 px-4 ">
-        <div className="space-y-1">
+      <div className="text-center space-y-8 py-16 px-4 ">
+        <FadeIn className="space-y-1">
           <h2 className="text-4xl font-bold">Proteção Personalizada</h2>
           <p className="lg:w-1/2 lg:mx-auto">
             Preparados para atuar em todas as fases do seu negócio, desde o
@@ -34,8 +34,8 @@ export function WhyUs() {
             programa de seguros, com a estratégia de simplificar o dia a dia dos
             clientes, otimizando e assegurando suas operações
           </p>
-        </div>
-        <div className="flex flex-col gap-8 text-center justify-center lg:flex-row">
+        </FadeIn>
+        <FadeIn className="flex flex-col gap-8 text-center justify-center lg:flex-row">
           {info.map((item, index) => (
             <div
               key={index}
@@ -49,8 +49,8 @@ export function WhyUs() {
               <p>{item.description}</p>
             </div>
           ))}
-        </div>
-      </FadeIn>
+        </FadeIn>
+      </div>
     </section>
   );
 }
