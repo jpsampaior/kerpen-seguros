@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     "gestão de risco",
     "Kerpen Seguros",
   ],
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Kerpen Seguros",
     description:
