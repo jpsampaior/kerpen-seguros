@@ -1,6 +1,7 @@
 "use client";
 
 import { AboutUs } from "@/components/about-us/about-us";
+import { SimpleFAQ } from "@/components/about-us/simple-faq";
 import { WhyUs } from "@/components/about-us/why-us";
 import { Footer } from "@/components/bottom/footer";
 import { Contacts } from "@/components/contacts/contacts";
@@ -41,6 +42,7 @@ export default function Home() {
       </FadeIn>
       <Services />
       <WhyUs />
+      <SimpleFAQ />
       <AboutUs />
       <Contacts />
       <Footer />
