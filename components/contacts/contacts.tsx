@@ -6,7 +6,7 @@ import { ContactForm } from "./contact-form";
 export function Contacts() {
   return (
     <section id="contato" className="bg-background-default">
-      <FadeIn className="text-center space-y-8 py-16 px-4">
+      <FadeIn className="text-center space-y-8 px-4">
         <div className="space-y-1">
           <h2 className="text-4xl font-bold">Estamos aqui para você</h2>
           <p className="lg:w-1/2 lg:mx-auto">

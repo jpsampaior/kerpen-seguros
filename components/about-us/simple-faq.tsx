@@ -63,8 +63,8 @@ export function SimpleFAQ() {
   ];
 
   return (
-    <section className="bg-background-default pb-16">
-      <Accordion type="single" className="w-3/4 mx-auto" collapsible>
+    <section className="bg-background-default pb-16 px-6">
+      <Accordion type="single" className="mx-auto lg:w-3/4" collapsible>
         {questions.map((item, index) => (
           <AccordionItem key={index} value={`item-${index + 1}`}>
             <AccordionTrigger>{item.question}</AccordionTrigger>

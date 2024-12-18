@@ -25,7 +25,7 @@ const info = [
 export function WhyUs() {
   return (
     <section className="bg-background-default">
-      <div className="text-center space-y-8 py-16 px-4 ">
+      <div className="text-center space-y-8 px-4">
         <FadeIn className="space-y-1">
           <h2 className="text-4xl font-bold">Proteção Personalizada</h2>
           <p className="lg:w-1/2 lg:mx-auto">

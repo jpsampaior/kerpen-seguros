@@ -29,7 +29,7 @@ const services = [
 export function Services() {
   return (
     <section id="servicos" className="bg-secondary">
-      <FadeIn className="flex flex-col  px-4 py-14 text-center justify-center gap-10 lg:flex-row">
+      <FadeIn className="flex flex-col px-4 py-14 text-center justify-center gap-10 lg:flex-row">
         {services.map((service, index) => (
           <div key={index} className="lg:w-1/4">
             {service.icon}

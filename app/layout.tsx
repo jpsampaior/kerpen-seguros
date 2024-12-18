@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={montserrat.className}>
-      <body className="antialiased bg-fixed bg-gradient bg-cover text-stone-300 overflow-x-hidden">
+      <body className="antialiased *:text-stone-300 overflow-x-hidden">
         <Header />
         {children}
       </body>

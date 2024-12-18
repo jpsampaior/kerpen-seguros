@@ -25,8 +25,10 @@ const partners = [
 export function AboutUs() {
   return (
     <section className="bg-background-default" id="sobre-nos">
-      <FadeIn className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0">
-        <h2 className="text-4xl font-bold">Quem Somos</h2>
+      <div className="bg-secondary/30 py-14 text-center space-y-6 lg:space-y-0">
+        <FadeIn>
+          <h2 className="text-4xl font-bold">Quem Somos</h2>
+        </FadeIn>
         <div className="space-y-5">
           {partners.map((partner, index) => (
             <FadeIn
@@ -69,7 +71,7 @@ export function AboutUs() {
             </FadeIn>
           ))}
         </div>
-      </FadeIn>
+      </div>
     </section>
   );
 }
