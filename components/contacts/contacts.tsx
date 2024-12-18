@@ -1,9 +1,7 @@
-import { Instagram, Mail, Phone, Search } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { FadeIn } from "../fade-in";
-import { Input } from "../ui/input";
 import { ContactForm } from "./contact-form";
-// import { EmailForm } from "./email-form";
 
 export function Contacts() {
   return (
@@ -50,9 +48,6 @@ export function Contacts() {
           </div>
         </div>
       </FadeIn>
-
-      {/* <EmailForm /> */}
-      {/* <Input className="w-fit mx-auto lg:m-0" placeholder="Email" /> */}
     </section>
   );
 }

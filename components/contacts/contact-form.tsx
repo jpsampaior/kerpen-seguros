@@ -4,11 +4,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { ContactFormSchema } from "@/lib/schema";
-import { useState } from "react";
 import { Form } from "../ui/form";
 import { FormFieldType, FormInput } from "./form-input";
 import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof ContactFormSchema>>({
