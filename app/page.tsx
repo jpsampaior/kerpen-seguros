@@ -1,7 +1,7 @@
 "use client";
 
 import { AboutUs } from "@/components/about-us/about-us";
-// import { SimpleFAQ } from "@/components/about-us/simple-faq";
+import { SimpleFAQ } from "@/components/about-us/simple-faq";
 import { WhyUs } from "@/components/about-us/why-us";
 import { Footer } from "@/components/bottom/footer";
 import { Contacts } from "@/components/contacts/contacts";
@@ -44,9 +44,9 @@ export default function Home() {
         <Services />
       </div>
       <WhyUs />
-      {/* <SimpleFAQ /> */}
       <AboutUs />
       <Contacts />
+      <SimpleFAQ />
       <Footer />
     </main>
   );

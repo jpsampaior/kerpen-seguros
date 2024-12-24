@@ -1,3 +1,4 @@
+import { FadeIn } from "../fade-in";
 import {
   Accordion,
   AccordionContent,
@@ -63,19 +64,24 @@ export function SimpleFAQ() {
   ];
 
   return (
-    <section className="bg-background-default pb-16 px-6">
-      <Accordion type="single" className="mx-auto lg:w-3/4" collapsible>
-        {questions.map((item, index) => (
-          <AccordionItem key={index} value={`item-${index + 1}`}>
-            <AccordionTrigger>{item.question}</AccordionTrigger>
-            <AccordionContent>
-              {item.answer.split("\n").map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+    <section className="bg-background-default px-6">
+      <FadeIn className="text-center">
+        <h2 className="text-4xl font-bold">Tire suas dúvidas</h2>
+      </FadeIn>
+      <FadeIn>
+        <Accordion type="single" className="mx-auto lg:w-3/4" collapsible>
+          {questions.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index + 1}`}>
+              <AccordionTrigger>{item.question}</AccordionTrigger>
+              <AccordionContent>
+                {item.answer.split("\n").map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </FadeIn>
     </section>
   );
 }
