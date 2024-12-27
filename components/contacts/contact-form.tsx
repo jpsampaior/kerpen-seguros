@@ -7,6 +7,7 @@ import { ContactFormSchema } from "@/lib/schema";
 import { Form } from "../ui/form";
 import { FormFieldType, FormInput } from "./form-input";
 import { Button } from "../ui/button";
+import axios from "axios";
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof ContactFormSchema>>({
@@ -25,14 +26,14 @@ export function ContactForm() {
     email,
     mensagem,
   }: z.infer<typeof ContactFormSchema>) {
-    console.log({ nome, telefone, email, mensagem });
-    // const login = async () => {
-    //   setLoading(true);
-    //   return auth?.login(email, password);
-    // };
+    const response = await axios.post("/api/contact", {
+      name: nome,
+      phone: telefone,
+      email,
+      message: mensagem,
+    });
 
-    // await login();
-    // setLoading(false);
+    console.log(response.data);
   }
 
   return (
