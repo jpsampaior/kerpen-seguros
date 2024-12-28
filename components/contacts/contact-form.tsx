@@ -8,6 +8,8 @@ import { Form } from "../ui/form";
 import { FormFieldType, FormInput } from "./form-input";
 import { Button } from "../ui/button";
 import axios from "axios";
+import { toast } from "sonner";
+import { Toaster } from "../ui/sonner";
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof ContactFormSchema>>({
@@ -26,18 +28,30 @@ export function ContactForm() {
     email,
     mensagem,
   }: z.infer<typeof ContactFormSchema>) {
-    const response = await axios.post("/api/contact", {
-      name: nome,
-      phone: telefone,
-      email,
-      message: mensagem,
-    });
+    async function sendEmail() {
+      await axios.post("/api/contact", {
+        name: nome,
+        phone: telefone,
+        email,
+        message: mensagem,
+      });
+    }
 
-    console.log(response.data);
+    async function submit() {
+      toast.promise(sendEmail(), {
+        loading: "Enviando mensagem...",
+        success: "Mensagem enviada com sucesso!",
+        error: (error) =>
+          `Erro ao enviar mensagem: ${error.response?.data.message}`,
+      });
+    }
+
+    submit();
   }
 
   return (
     <Form {...form}>
+      <Toaster richColors />
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-4 lg:w-1/2 lg:mx-auto"
