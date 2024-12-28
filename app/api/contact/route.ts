@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
   await resend.emails.send({
     from: "onboarding@resend.dev",
     to: "jpsampaio@edu.unifor.br",
-    subject: "Hello World",
+    subject: `Contato de ${name} - ${email}`,
     react: DefaultEmail({ name, phone, email, message }),
   });
 
