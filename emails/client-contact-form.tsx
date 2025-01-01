@@ -56,63 +56,48 @@ export default function ClientContactFormEmail({
       }}
     >
       <Html>
-        <Body
-          style={{
-            backgroundColor: "#F9FAFB",
-            color: "#000000",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
-          <Container>
+        <Body className="bg-darkBackground text-stone-300 font-sans">
+          <Container className="p-4 max-w-2xl mx-auto">
             <header>
-              <Heading
-                as="h1"
-                style={{
-                  fontSize: "24px",
-                  color: "#000000",
-                  marginBottom: "8px",
-                }}
-              >
+              <Heading className="text-2xl font-bold text-stone-300 mb-2">
                 Formulário de contato Kerpen Seguros
               </Heading>
-              <Text style={{ fontSize: "14px", color: "#000000" }}>
+              <Text className="text-sm text-stone-300">
                 Email enviado automaticamente pelo cliente por meio do
                 formulário de contato no site{" "}
                 <Link
                   href="https://kerpenseguros.com.br"
-                  style={{ color: "#F0C05D", textDecoration: "underline" }}
+                  className="text-primary underline"
                 >
                   kerpenseguros.com.br
                 </Link>
               </Text>
             </header>
-            <Hr style={{ margin: "16px 0", borderColor: "#CCC" }} />
+            <Hr className="my-4 border-t border-gray-300" />
             <main>
-              <Heading
-                as="h2"
-                style={{
-                  fontSize: "18px",
-                  color: "#000000",
-                  marginBottom: "8px",
-                }}
-              >
+              <Heading className="text-lg font-semibold text-stone-300 mb-2">
                 Informações do Cliente
               </Heading>
-              <Text style={{ fontSize: "14px", color: "#000000" }}>
-                <b style={{ color: "#F0C05D" }}>Nome:</b> {name}
+              <Text className="text-sm text-stone-300">
+                <span className="text-primary font-semibold">Nome:</span> {name}
               </Text>
-              <Text style={{ fontSize: "14px", color: "#000000" }}>
-                <b style={{ color: "#F0C05D" }}>Telefone:</b> {phone}
+              <Text className="text-sm text-stone-300">
+                <span className="text-primary font-semibold">Telefone:</span>{" "}
+                {phone}
               </Text>
-              <Text style={{ fontSize: "14px", color: "#000000" }}>
-                <b style={{ color: "#F0C05D" }}>Email:</b> {email}
+              <Text className="text-sm text-stone-300">
+                <span className="text-primary font-semibold">Email:</span>{" "}
+                {email}
               </Text>
-              <Text style={{ fontSize: "14px", color: "#000000" }}>
-                <b style={{ color: "#F0C05D" }}>Data e hora do envio:</b>{" "}
+              <Text className="text-sm text-stone-300">
+                <span className="text-primary font-semibold">
+                  Data e hora do envio:
+                </span>{" "}
                 {dateTime}
               </Text>
-              <Text style={{ fontSize: "14px", color: "#000000" }}>
-                <b style={{ color: "#F0C05D" }}>Mensagem:</b> {message}
+              <Text className="text-sm text-stone-300">
+                <span className="text-primary font-semibold">Mensagem:</span>{" "}
+                {message}
               </Text>
             </main>
           </Container>
