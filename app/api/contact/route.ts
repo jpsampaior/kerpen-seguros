@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { DefaultEmail } from "@/components/emails/default-email";
+import ClientContactFormEmail from "@/emails/client-contact-form";
 
 export async function POST(request: NextRequest) {
   const { name, phone, email, message } = await request.json();
@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     from: "onboarding@resend.dev",
     to: "jpsampaio@edu.unifor.br",
     subject: `Contato de ${name} - ${email}`,
-    react: DefaultEmail({ name, phone, email, message }),
+    react: ClientContactFormEmail({ name, phone, email, message }),
   });
 
   return NextResponse.json({

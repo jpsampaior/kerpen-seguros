@@ -6,7 +6,6 @@ import { WhyUs } from "@/components/about-us/why-us";
 import { Footer } from "@/components/bottom/footer";
 import { Contacts } from "@/components/contacts/contacts";
 import { CustomLink } from "@/components/custom-link";
-import { DefaultEmail } from "@/components/emails/default-email";
 import { FadeIn } from "@/components/fade-in";
 import { Services } from "@/components/services/services";
 import { ArrowRight } from "lucide-react";
