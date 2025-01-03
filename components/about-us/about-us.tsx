@@ -2,22 +2,25 @@ import { Linkedin, Mail } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Link from "next/link";
 import { FadeIn } from "../fade-in";
+import { getInitials } from "@/lib/utils";
 
 const partners = [
   {
     name: "Orlando Kerpen",
     role: "CEO",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies ipsum semper ullamcorper euismod. Aenean volutpat, mauris ut iaculis lacinia, dui elit aliquet arcu, non fringilla massa dolor dapibus velit.",
+      "Com mais de 55 anos de experiência no mercado de seguros, é referência no segmento de transporte. Sua expertise e visão estratégica garantem à Kerpen Seguros uma liderança sólida e inovadora, sempre comprometida em oferecer soluções personalizadas e de excelência.",
     email: "orlandokerpen@uol.com.br",
+    avatar: "/orlando-kerpen.jpg",
     linkedin: "https://www.linkedin.com/in/orlando-kerpen-2aa00a1b6/",
   },
   {
     name: "Rebeka Kerpen",
-    role: "Diretora",
+    role: "Diretora Técnica e Jurídica",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies ipsum semper ullamcorper euismod. Aenean volutpat, mauris ut iaculis lacinia, dui elit aliquet arcu, non fringilla massa dolor dapibus velit.",
+      "Advogada especializada em contratos de seguros e com mais de 6 anos de experiência no setor, combina conhecimento técnico e jurídico para oferecer atendimento diferenciado aos clientes. Seu compromisso com a excelência e inovação no mercado segurador é uma de suas marcas registradas.",
     email: "rebekakerpen@kerpenseguros.com.br",
+    avatar: "/rebeka-kerpen.jpg",
     linkedin: "https://www.linkedin.com/in/rebeka-kerpen/",
   },
 ];
@@ -37,8 +40,8 @@ export function AboutUs() {
             >
               <div className="rounded-full bg-stone-600 w-fit">
                 <Avatar className="w-[150px] h-[150px]">
-                  <AvatarImage src="/avatar-placeholder.png" />
-                  <AvatarFallback>OK</AvatarFallback>
+                  <AvatarImage src={partner.avatar} />
+                  <AvatarFallback>{getInitials(partner.name)}</AvatarFallback>
                 </Avatar>
               </div>
               <div className="text-start space-y-2">
