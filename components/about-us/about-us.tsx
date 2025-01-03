@@ -46,7 +46,7 @@ export function AboutUs() {
               </div>
               <div className="text-start space-y-2">
                 <div>
-                  <div className="flex justify-center items-baseline gap-3 text-primary lg:justify-start">
+                  <div className="flex flex-wrap justify-center items-baseline gap-1 lg:gap-3 text-primary lg:flex-nowrap lg:justify-start">
                     <h3 className="text-2xl font-bold">{partner.name}</h3>
                     <h4>{partner.role}</h4>
                   </div>
